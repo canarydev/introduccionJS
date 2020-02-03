@@ -4,6 +4,7 @@ DOM es una estructura de objetos que genera el navegador cuando se carga un docu
 */
 
 var caja = document.getElementById("caja");
+//También puedes acceder a un id utilizando # de esta forma:
 //var caja = document.querySelector("#caja");
 console.log("caja ", caja);
 
