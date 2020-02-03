@@ -7,9 +7,9 @@ var caja = document.getElementById("caja");
 //var caja = document.querySelector("#caja");
 console.log("caja ", caja);
 
- var cajas = document.querySelectorAll("#cajas");
- console.log("caja ", cajas);
+var cajas = document.querySelectorAll("#cajas");
+console.log("caja ", cajas);
 
- caja.style.width = "200px"
- caja.style.height = "200px"
- caja.style.background = "red"
+caja.style.width = "200px"
+caja.style.height = "200px"
+caja.style.background = "red"
