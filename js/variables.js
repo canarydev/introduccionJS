@@ -36,7 +36,7 @@ var cajónDeSastre = [1, "hola mundo", true]
 console.log("cajónDeSastre ", cajónDeSastre);
 console.log("cajónDeSastre[1] ", cajónDeSastre[1]);
 
-//Objetos (Diccionarios)
+//Objetos (Diccionarios o JSON)
 var car = {
     marca: "VolksWagen",
     modelo: "Polo",
