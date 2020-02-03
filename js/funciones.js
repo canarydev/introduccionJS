@@ -10,6 +10,8 @@ Además las funciones pueden contener parámetros. Las funciones de JS no admite
 Otra cosa curiosa es que no existe sobrecarga de funciones en JS.
 */
 
+/*
+*/
 //Declaración de una función SIN parámetros
 function saludar() {
     console.log("Hola a todos.");
@@ -18,6 +20,7 @@ function saludar() {
 //Ejecución de una función
 saludar();
 
+/*
 //Declaración de una función CON parámetros.
 function suma(x, y) {
     return (x + y);
@@ -43,7 +46,7 @@ console.log("suma3(3, 5, 1) = ", suma3(3, 5, 1));
 
 //Utilizando recursividad.
 var suma4 = function (array) {
-    if (array.length === 0) {
+    if (array.length == 0) {
         return 0;
     }
     else {
@@ -60,10 +63,22 @@ console.log("suma5([1,2,4,6]) = ", suma5([1, 2, 4, 6]));
 
 
 
-//fibonaci
-function fibonaci (n){
+//fibonacci usando recursividad:
+function fibonacc1 (n){
     if (n === 0 || n ===1) return 1;
-    return fibonaci(n-1) + fibonaci(n-2);
+    return fibonacci1(n-1) + fibonacci1(n-2);
 }
-console.log("fibonaci(5)", fibonaci(10));
+console.log("fibonacci1(5)", fibonacci1(5));
 
+
+//fibonacci usando recursividad en una sola línea utilizando un operador ternario:
+
+function fibonacci2 (n){
+    return (n === 0 || n ===1) ? 1 : fibonacci2(n-1) + fibonacci2(n-2);
+}
+console.log("fibonacci2(5)", fibonacci2(5));
+
+for(var i = 0; i < 11; i++){
+    console.log("fibonacci de " + i + " es " + fibonacci2(i));
+}
+*/
