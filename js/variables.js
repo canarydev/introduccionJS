@@ -15,28 +15,28 @@ Si la variable necesitara de dos palabras utilizaremos CamelCase. Ejemplo: var h
 
 //Números
 var integer = 1;
-console.log("number ", integer);
+console.log("number", integer);
 var float = 0.1;
-console.log("float ", float);
+console.log("float", float);
 
 //Strings
 var string = "Hola mundo";
-console.log("string ", string);
+console.log("string", string);
 
 //Booleanos
 var verdadero = true;
-console.log("verdadero ", verdadero);
+console.log("verdadero", verdadero);
 var falso = false;
-console.log("falso ", falso);
+console.log("falso", falso);
 
 //Array
 var colors = ["white", "black", "blue", "red", "yellow", "pink"]
-console.log("colors ", colors);
+console.log("colors", colors);
 var cajónDeSastre = [1, "hola mundo", true]
-console.log("cajónDeSastre ", cajónDeSastre);
-console.log("cajónDeSastre[1] ", cajónDeSastre[1]);
+console.log("cajónDeSastre", cajónDeSastre);
+console.log("cajónDeSastre[1]", cajónDeSastre[1]);
 
-//Objetos (Diccionarios o JSON)
+//Objetos (Diccionarios o JSON). Se verán con más detalle en objetos.js
 var car = {
     marca: "VolksWagen",
     modelo: "Polo",
@@ -46,10 +46,11 @@ var car = {
 }
 console.log("car.nºBastidor", car.nºBastidor);
 
+
 //Undefined
 var noDefinido = undefined
-console.log("noDefinido ", noDefinido);
+console.log("noDefinido", noDefinido);
 
 //Not a Number NAN
-var notANumber = NaN
-console.log("notANumber ", notANumber);
+var notANumber = NaN;
+console.log("notANumber", notANumber);
