@@ -5,13 +5,11 @@
 ¿Qué es una función?
 Una función es un conjunto de líneas de código que realizan una tarea específica y pueden retornar, o no, un valor.
 
-Además las funciones pueden contener parámetros. Las funciones de JS no admiten valores por defecto en las funciones, pero eso se puede solucionar de otra forma.
+Además las funciones pueden contener parámetros y tener valores por defecto.
 
 Otra cosa curiosa es que no existe sobrecarga de funciones en JS.
 */
 
-/*
-*/
 //Declaración de una función SIN parámetros
 function saludar() {
     console.log("Hola a todos.");
@@ -20,7 +18,7 @@ function saludar() {
 //Ejecución de una función
 saludar();
 
-/*
+
 //Declaración de una función CON parámetros.
 function suma(x, y) {
     return (x + y);
@@ -61,24 +59,27 @@ var suma5 = function (array) {
 }
 console.log("suma5([1,2,4,6]) = ", suma5([1, 2, 4, 6]));
 
+//Suma con valores por defecto
+function suma6(x = 1, y = 5) {
+    return x + y;
+}
+console.log("suma6() = ", suma6());
 
-
-//fibonacci usando recursividad:
-function fibonacc1 (n){
-    if (n === 0 || n ===1) return 1;
-    return fibonacci1(n-1) + fibonacci1(n-2);
+//Fibonacci usando recursividad:
+function fibonacci1(n) {
+    if (n === 0 || n === 1) return 1;
+    return fibonacci1(n - 1) + fibonacci1(n - 2);
 }
 console.log("fibonacci1(5)", fibonacci1(5));
 
 
-//fibonacci usando recursividad en una sola línea utilizando un operador ternario:
+//Fibonacci usando recursividad en una sola línea utilizando un operador ternario:
 
-function fibonacci2 (n){
-    return (n === 0 || n ===1) ? 1 : fibonacci2(n-1) + fibonacci2(n-2);
+function fibonacci2(n) {
+    return (n === 0 || n === 1) ? 1 : fibonacci2(n - 1) + fibonacci2(n - 2);
 }
 console.log("fibonacci2(5)", fibonacci2(5));
 
-for(var i = 0; i < 11; i++){
+for (var i = 0; i < 11; i++) {
     console.log("fibonacci de " + i + " es " + fibonacci2(i));
 }
-*/
