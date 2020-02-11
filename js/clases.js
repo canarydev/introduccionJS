@@ -1,3 +1,15 @@
+/* ===============
+    C L A S E S
+ =================
+
+¿Qué es una clase?
+Una clase es un conjunto de líneas de código que nos permiten crear objetos y métodos que se les pueden aplicar a los mismos.
+
+Las clases pueden heredar unas de otras. En el ejemplo, Humano hereda de la clase Personaje. Para extender o heredar de una clase utilizaremos la palabra reservada "extends";
+
+En este ejemplo crearemos a los personajes principales de Rick y Morty, los cuales podrán presentarse y, además, relacionarse entre ellos como una familia.
+*/
+
 class Personaje {
     constructor(nombre, apellido, edad, aficiones = []) {
         this.nombre = nombre;
@@ -24,7 +36,7 @@ class Personaje {
                 (i < this.aficiones.length - 1) ? this.aficiones[i] + ", " :
                     (aficiones.length > 1) ? "y " + this.aficiones[i] + "." : this.aficiones[i] + ".";
         }
-        return aficiones
+        return aficiones;
     }
 }
 
@@ -33,7 +45,7 @@ class Humano extends Personaje {
     familiares = {};
 
     constructor(nombre, apellido, edad, hombre = true, aficiones, familiares = {}) {
-        super(nombre, apellido, edad, aficiones)
+        super(nombre, apellido, edad, aficiones);
         this.hombre = hombre;
     }
 
@@ -112,4 +124,4 @@ Jerry.addFamiliar("hija", Summer);
 
 Beth.addFamiliar("hija", Summer);
 
-console.log(Rick, Morty, Jerry, Beth, Summer)
+console.log(Rick, Morty, Jerry, Beth, Summer);
