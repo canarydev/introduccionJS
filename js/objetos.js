@@ -54,7 +54,7 @@ console.log("Aplicando un operador de casteo Number() =>", Number(Rick.edad) + M
 console.log("Familiares de Rick:", Rick.familiares);
 
 //¿Qué devolverá?
-console.log("Familiares de Morty:",Morty.familiares);
+console.log("Familiares de Morty:", Morty.familiares);
 
 //Si queremos acceder a la segunda afición de Rick a través de Morty, ¿cómo lo harías?
 //Haz un console log que muestre el resultado.
