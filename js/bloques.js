@@ -9,7 +9,9 @@ var i = 0;
 
 
 
-/* SENTENCIAS CONDICIONALES */
+/*=========================
+  SENTENCIAS CONDICIONALES
+=========================*/
 
 /*================
         I F
@@ -151,7 +153,11 @@ Estructura:
 var variable = (i == 0) ? true : false;
 console.log(5, variable);
 
-
+/* Nota importante: El operador ternario no puede tener como valores posibles ni 'break', ni 'continue'. En su lugar se debe utilizar "if-else".
+   
+Ejemplo de código no válido:
+   (i == 0) ? console.log("i vale 0") : continue;
+*/
 
 
 /*======================================
@@ -159,6 +165,7 @@ EQUIVALENCIA EN SENTENCIAS CONDICIONALES
 ======================================*/
 
 i = 1;
+
 
 if (i == 0) {
     console.log(6, true);
@@ -176,3 +183,58 @@ switch (i) {
 }
 
 (i == 0) ? console.log(6, true) : console.log(6, false);
+
+
+
+
+/*==============
+   B U C L E S
+==============*/
+
+/*=============
+    F  O  R
+===============
+
+El bucle "for" ejecuta tantas veces como le sea posible las instrucciones que contiene.
+
+
+Estructura:
+
+    for (inicialización; condición; incremento) {
+        código;
+    }
+
+*/
+for (var j = 0; j <= 10; j++) {
+    console.log("Primer for:", j);
+}
+
+
+/*
+En los bucles podemos encontrar algunas palabras reservadas que cambien su comportamiento. Estas palabras reservadas pueden ser "break", "continue" y let.
+
+"break" sale del bucle de inmediato.
+"continue" hace que el bucle ejecute su siguiente iteración.
+"let" permite crear una variable local para el bloque donde se crea.
+*/
+
+//Ejemplo de break. La ejecución del bucle se para al llegar a 5:
+for (var j = 0; j <= 10; j++) {
+    console.log("'for' con 'break¡:", j);
+    if (j == 5) break;
+}
+
+//Ejemplo de continue. No se mostrarán los números pares:
+for (var j = 0; j <= 10; j++) {
+    if (j%2 == 1) console.log("'for' con 'continue':", j);
+    else continue;
+}
+
+//Ejemplo de una nueva variable creada con let:
+console.log("'i' global", i); //La variable "i" vale 1 en este momento.
+
+for (let i = 0; i <= 10; i++) {
+    console.log("'i' local", i); //La variable "i" ahora tomará su valor local.
+}
+
+console.log("'i' global", i); //La variable "i" vuelve a su valor normal.
