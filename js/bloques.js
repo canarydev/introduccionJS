@@ -134,7 +134,6 @@ switch (i) {
 
 
 
-
 /*================
 OPERADOR  TERNARIO
 ==================
@@ -160,13 +159,14 @@ Ejemplo de código no válido:
 */
 
 
+
 /*======================================
 EQUIVALENCIA EN SENTENCIAS CONDICIONALES
 ======================================*/
 
 i = 1;
 
-
+//Usando if-else
 if (i == 0) {
     console.log(6, true);
 }
@@ -174,6 +174,7 @@ else  {
     console.log(6, false);
 }
 
+//Usando switch-case
 switch (i) {
     case 0:
         console.log(6, true);
@@ -182,6 +183,7 @@ switch (i) {
         console.log(6, false);
 }
 
+//Usando un operador ternario 
 (i == 0) ? console.log(6, true) : console.log(6, false);
 
 
@@ -189,7 +191,10 @@ switch (i) {
 
 /*==============
    B U C L E S
-==============*/
+================
+
+Su objetivo es repetir la ejecución de código.
+*/
 
 /*=============
     F  O  R
@@ -238,3 +243,99 @@ for (let i = 0; i <= 10; i++) {
 }
 
 console.log("'i' global", i); //La variable "i" vuelve a su valor normal.
+
+
+
+/*=============
+   W H I L E
+===============
+
+El bucle "while" ejecuta el código que contiene mientras se cumpla la condición.
+Es importante cambiar la condición dentro del bucle, puesto que si la condición es constante el bucle se convierte en un bucle infinito.
+
+Estructura:
+
+    while (condición) {
+        código;
+    }
+
+*/
+
+while (j > 0) {
+    console.log("'while':", j);
+    j--;
+}
+
+
+
+/*=============
+   DO   WHILE
+===============
+
+El bucle "do while" es una variante del "while" que ejecuta el código la primera vez y luego comprueba que se cumpla la condición.
+Es importante cambiar la condición dentro del bucle, puesto que si la condición es constante el bucle se convierte en un bucle infinito.
+
+Estructura:
+    do {
+        código;
+    }
+    while (condición);
+*/
+
+do {
+    console.log("'do while':", j);
+    j++
+}
+while (j <= 10);
+
+
+
+/*==============
+    FOR EACH
+================
+
+"for each" es un bucle que toma un elemento iterable (como un array) y extrae cada uno de los elementos que lo componen para realizar operaciones con él.
+Básicamente es lo mismo que un "for", pero aplicado a un elemento iterable.
+
+Estructura:
+    array.forEach(element => {
+        código
+    });
+*/
+var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+array.forEach(element => {
+    console.log("'foreach':", element);
+});
+
+
+
+/*====================
+EQUIVALENCIA EN BUCLES
+=====================*/
+array = [0, 1];
+
+//Con 'for'
+i = 0;
+for (i; i < array.length; i++) {
+    console.log("Equivalencia 'for':", array[i]);
+}
+
+//Con 'while'
+i = 0;
+while (i < array.length){
+    console.log("Equivalencia 'while':", array[i]);
+    i++;
+}
+
+//Con 'do while'
+i = 0;
+do {
+    console.log("Equivalencia 'do while':", array[i]);
+    i++;
+}
+while (i < array.length);
+
+//Con 'foreach'
+array.forEach(element => {
+    console.log("Equivalencia 'foreach':", element);
+});
