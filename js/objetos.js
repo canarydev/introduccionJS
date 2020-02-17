@@ -58,3 +58,4 @@ console.log("Familiares de Morty:", Morty.familiares);
 
 //Si queremos acceder a la segunda afición de Rick a través de Morty, ¿cómo lo harías?
 //Haz un console log que muestre el resultado.
+console.log(Morty.familiares.abuelo.aficiones[1]);

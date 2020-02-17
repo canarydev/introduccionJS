@@ -73,8 +73,8 @@ Estructura:
 
 */
 
-if (i == 1) console.log(3, "if vale uno");
-else if (i == 0) console.log(3, "if vale 0");
+if (i == 1) console.log(3, "i vale uno");
+else if (i == 0) console.log(3, "i vale 0");
 
 
 
@@ -225,14 +225,15 @@ En los bucles podemos encontrar algunas palabras reservadas que cambien su compo
 
 //Ejemplo de break. La ejecución del bucle se para al llegar a 5:
 for (var j = 0; j <= 10; j++) {
-    console.log("'for' con 'break¡:", j);
+    console.log("'for' con 'break!:", j);
     if (j == 5) break;
 }
 
 //Ejemplo de continue. No se mostrarán los números pares:
 for (var j = 0; j <= 10; j++) {
     if (j%2 == 1) console.log("'for' con 'continue':", j);
-    else continue;
+    continue;
+    console.log("soy par");
 }
 
 //Ejemplo de una nueva variable creada con let:

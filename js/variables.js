@@ -51,6 +51,6 @@ console.log("car.nºBastidor", car.nºBastidor);
 var noDefinido = undefined
 console.log("noDefinido", noDefinido);
 
-//Not a Number NAN
+//Not a Number NAN (string + number)
 var notANumber = NaN;
 console.log("notANumber", notANumber);
